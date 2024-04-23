@@ -1,7 +1,12 @@
+import { useContext } from "react";
+import Context from "../context/context";
+
 function TodoList(){
+
+    const {user} = useContext(Context);
     return(
         <h1>
-            Página de Todo List
+            Email logado : {user}
         </h1>
     )
 }
