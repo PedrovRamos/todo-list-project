@@ -1,14 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Input from './Input.jsx';
-import Context from '../context/Context';
+import Context from '../context/context';
 
 export default function Todo({ todoData }) {
-    console.log(todoData);
-//   const { editTodo } = useContext(Context);
+  const { editTodo } = useContext(Context);
 
-//   const handleChange = () => {
-//     editTodo({ ...todoData, checked: !todoData.checked });
-//   };
+
+  const handleChange = () => {
+    editTodo({ ...todoData, checked: !todoData.checked });
+  };
 
   return (
     <label htmlFor={ todoData.id }>
@@ -17,6 +17,7 @@ export default function Todo({ todoData }) {
         id={ todoData.id }
         value={ todoData.value }
         checked={ todoData.checked }
+        onChange={handleChange}
       />
       {todoData.value}
     </label>
