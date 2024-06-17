@@ -13,7 +13,7 @@
   1. `$ cd to-do-list-project/src/services`
   2. `$ npx json-server data.json`
   
-## Bibliotecas utilizadas
+## Stacks utilizadas
 
 ### Front-end
 
